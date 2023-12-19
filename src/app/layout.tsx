@@ -1,8 +1,20 @@
+import BgAnimate from '@/components/BgAnimate'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Serif_Text, Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const serif = DM_Serif_Text({
+  weight: '400',
+  style: ['italic'],
+  subsets: ['latin'],
+  variable: '--font-serif',
+})
+
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang='en' className={`${poppins.variable} ${serif.variable}`}>
+      <body className=' bg-black text-white font-poppins tracking-wider'>
+        {children}
+        <BgAnimate />
+      </body>
     </html>
   )
 }
