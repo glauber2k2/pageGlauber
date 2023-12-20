@@ -3,12 +3,12 @@ import {
   FaProjectDiagram,
   FaRegUserCircle,
   FaSignature,
-  FaWhatsapp,
+  FaUsers,
 } from 'react-icons/fa'
 import AboutMe from './tabs/AboutMe'
 import MyProjects from './tabs/MyProjects'
 import MyWork from './tabs/MyWork'
-import Wpp from './tabs/Wpp'
+import Social from './tabs/Social'
 
 function Home() {
   return (
@@ -29,8 +29,8 @@ function Home() {
           <MyWork />
         </TabsContent>
 
-        <TabsContent value='wpp'>
-          <Wpp />
+        <TabsContent value='social'>
+          <Social />
         </TabsContent>
 
         <TabsList className='fixed bottom-0 md:bottom-10 left-[50%] translate-x-[-50%] w-screen md:w-auto'>
@@ -44,11 +44,11 @@ function Home() {
           </TabsTrigger>
           <TabsTrigger value='work' className=''>
             <FaSignature />
-            <p className='hidden md:flex'> Meu trabalho</p>
+            <p className='hidden md:flex'> meu trabalho</p>
           </TabsTrigger>
-          <TabsTrigger value='wpp' className='flex items-center gap-2'>
-            <FaWhatsapp />
-            <p className='hidden md:flex'> whatsapp</p>
+          <TabsTrigger value='social' className='flex items-center gap-2'>
+            <FaUsers />
+            <p className='hidden md:flex'> minhas redes</p>
           </TabsTrigger>
         </TabsList>
       </Tabs>

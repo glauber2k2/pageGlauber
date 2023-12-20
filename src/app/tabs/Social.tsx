@@ -2,14 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { FunctionComponent } from 'react'
+import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 
 interface WppProps {}
 
 const Wpp: FunctionComponent<WppProps> = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ ease: 'backInOut', duration: 2 }}
       className='flex gap-8 md:flex-row items-center justify-center md:h-full md:gap-20 h-screen flex-col-reverse'
     >
@@ -28,10 +29,25 @@ const Wpp: FunctionComponent<WppProps> = () => {
           me contatar clicando no botão abaixo.
         </article>
 
-        <article className='font-thin text-xs md:text-lg ml-8'>
-          Venha tirar sua duvida ou falar sobre a nescidade do seu negocio,
+        <article className='font-thin text-xs md:text-lg ml-8 mb-8'>
+          Venha tirar sua duvida ou falar sobre a necessidade do seu negocio,
           totalmente livre de compromisso.
         </article>
+
+        <span className='flex md:items-center md:gap-8 flex-col md:flex-row gap-2'>
+          <button className='font-DMSerif flex items-center gap-2 hover:underline tracking-widest'>
+            <FaWhatsapp />
+            whatsapp
+          </button>
+          <button className='font-DMSerif flex items-center gap-2 hover:underline tracking-widest'>
+            <FaLinkedin />
+            linkedin
+          </button>
+          <button className='font-DMSerif flex items-center gap-2 hover:underline tracking-widest'>
+            <FaInstagram />
+            instagram
+          </button>
+        </span>
       </span>
     </motion.div>
   )

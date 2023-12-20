@@ -105,7 +105,7 @@ export default function ProjectWindow() {
             className='flex items-center md:h-full gap-4'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: 'backInOut', duration: 2 }}
+            transition={{ ease: 'backInOut', duration: 1 }}
           >
             <button onClick={prevSlide}>
               <FaChevronLeft />
@@ -118,7 +118,10 @@ export default function ProjectWindow() {
                 return (
                   <Dialog key={repoIndex}>
                     <DialogTrigger>
-                      <img
+                      <motion.img
+                        initial={{ y: -100 }}
+                        animate={{ y: 0 }}
+                        transition={{ velocity: 1 }}
                         src={`https://raw.githubusercontent.com/glauber2k2/${repo.name}/main/public/thumb.png`}
                         alt=''
                         className='h-full w-full object-cover rounded-xl opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer'

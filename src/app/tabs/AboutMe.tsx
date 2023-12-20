@@ -3,16 +3,17 @@
 import { FunctionComponent } from 'react'
 
 import { motion } from 'framer-motion'
+import { FaWhatsapp } from 'react-icons/fa'
 
 interface AboutMeProps {}
 
 const AboutMe: FunctionComponent<AboutMeProps> = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ ease: 'backInOut', duration: 2 }}
-      className='flex gap-8 md:flex-row items-center justify-center md:h-full md:gap-20 h-screen flex-col-reverse'
+      className='flex gap-8 md:flex-row items-center justify-center md:h-full md:gap-20 h-screen flex-col-reverse max-h-screen'
     >
       <motion.img
         className='w-1/2 object-scale-down md:w-auto'
@@ -28,6 +29,10 @@ const AboutMe: FunctionComponent<AboutMeProps> = () => {
           Sou programador front-end, e fazem 3 anos que trabalho com criação de
           websites. Comigo você conseguirá dar um UP na sua presença online.
         </article>
+        <button className='flex items-center gap-2 bg-emerald-800 px-4 py-2 rounded-xl hover:bg-emerald-700 transition-colors duration-300'>
+          <FaWhatsapp />
+          quero saber mais
+        </button>
       </span>
     </motion.div>
   )

@@ -15,11 +15,11 @@ const MyProjects: FunctionComponent<MyProjectsProps> = () => {
     'alta taxa de conversão',
   ])
   return (
-    <div className='flex flex-col md:flex-row items-center justify-center h-full md:gap-36 '>
+    <div className='flex flex-col md:flex-row items-center justify-center h-full md:gap-36 py-8'>
       <motion.span
         className='md:w-1/2 space-y-10'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ ease: 'backInOut', duration: 1.5 }}
       >
         <h1 className='font-DMSerif text-4xl md:text-6xl tracking-widest font-bold'>
